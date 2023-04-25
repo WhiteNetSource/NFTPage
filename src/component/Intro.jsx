@@ -4,11 +4,14 @@ import { CONTRACT_ADDRESS } from "../web3.config";
 const ranNum = Math.floor(Math.random() * 1000) + 1;
 const imgSrc = `${process.env.REACT_APP_IMAGE_URL}/${ranNum}.png`;
 
-const Intro = ({ totalNft, mintedNft }) => {
+const Intro = ({ totalNft, mintedNft, myNft }) => {
   return (
     <div className="bg-gradient-to-b from-transparent to-red-400 pt-10 ">
-      <div className="max-w-screen-xl mx-auto">
+      <div className="max-w-screen-xl mx-auto px-4 relative">
         <div className="relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-yellow-300 text-9xl truncate opacity-40 pb-4 pointer-events-none">
+            사과는 영어로 애뽈
+          </div>
           <img
             className="absolute z-10 w-40 h-40 rounded-full"
             src={imgSrc}
@@ -42,6 +45,10 @@ const Intro = ({ totalNft, mintedNft }) => {
           <div className="ml-4">
             <div className="font-bold">{mintedNft}</div>
             <div className="text-gray-300">발행된 NFT</div>
+          </div>
+          <div className="ml-4">
+            <div className="font-bold">{myNft}</div>
+            <div className="text-gray-300">내 NFT</div>
           </div>
         </div>
       </div>
