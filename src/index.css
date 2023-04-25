@@ -1,3 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+/* 이게 테일윈드 연결 폰트 따오는 방법은 여러가지니깐 이건 여러가지 중 일부*/
