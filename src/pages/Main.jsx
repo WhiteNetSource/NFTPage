@@ -52,14 +52,14 @@ const Main = ({ account }) => {
     getMintedNft();
   }, []);
 
-  useEffect(() => {
+  useState(() => {
     getMyNft();
   }, [account]);
 
   return (
     <div>
       <Intro totalNft={totalNft} mintedNft={mintedNft} myNft={MyNft} />
-      <Nfts page={page}></Nfts>
+      <Nfts page={page} mintedNft={mintedNft}></Nfts>
     </div>
   );
 };
